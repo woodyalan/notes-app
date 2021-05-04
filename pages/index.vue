@@ -23,18 +23,15 @@
 export default {
   layout: "home",
   middleware: "auth",
-  data() {
-    return {
-      notas: []
-    };
-  },
   async fetch() {
-    const { data } = await this.$axios.get(`nota/usuario/${this.usuario.id}`);
-    this.notas = data;
+    await this.$store.dispatch("nota/list", this.usuario.id);
   },
   computed: {
     usuario() {
       return this.$store.state.auth.user;
+    },
+    notas() {
+      return this.$store.state.nota.list;
     }
   }
 };
