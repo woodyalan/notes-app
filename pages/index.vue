@@ -1,5 +1,11 @@
 <template>
   <div>
+    <div class="text-center">
+      <b-button to="nota/new" variant="dark" size="lg" class="my-5"
+        >Nova Nota</b-button
+      >
+    </div>
+
     <p v-if="$fetchState.pending" class="text-center">Carregando...</p>
     <p v-else-if="$fetchState.error" class="text-center">
       Ocorreu um erro :(
