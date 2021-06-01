@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col-md-7 d-flex vh-100 justify-content-center">
         <div class="col-md-5 align-self-center">
+          <offline-alert v-show="$nuxt.isOffline" />
+
           <Nuxt />
         </div>
       </div>
@@ -17,6 +19,6 @@ export default {};
 
 <style>
 .cover {
-  background: url("https://url.gratis/wftZc") center center;
+  background: url("/cover.jpg") center center;
 }
 </style>

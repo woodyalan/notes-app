@@ -20,7 +20,7 @@ export default {
         content: "Sem lojas e instalações. Crie suas anotações mesmo offline"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/png", href: "/icon.png" }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -33,7 +33,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/pwa"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -66,4 +66,20 @@ export default {
       }
     }
   },
+
+  pwa: {
+    icon: {
+      source: "icon.png"
+    },
+    meta: {
+      theme_color: "#FCC344",
+      appleStatusBarStyle: "black-translucent"
+    },
+    manifest: {
+      name: "Notes App TADS",
+      short_name: "Notes App",
+      description: "Aplicativo para anotações do curso de TADS",
+      lang: "pt-br"
+    }
+  }
 };

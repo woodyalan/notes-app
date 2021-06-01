@@ -22,7 +22,13 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-button block type="submit" variant="primary">Acessar</b-button>
+      <b-button v-if="$nuxt.isOnline" block type="submit" variant="primary"
+        >Acessar</b-button
+      >
+
+      <b-button class="mt-5" to="registro" block variant="link"
+        >Cadastre-se</b-button
+      >
     </b-form>
   </div>
 </template>

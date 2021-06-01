@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="text-center">
-      <b-button to="nota/new" variant="dark" size="lg" class="my-5"
+      <b-button
+        v-if="$nuxt.isOnline"
+        to="nota/new"
+        variant="dark"
+        size="lg"
+        class="my-5"
         >Nova Nota</b-button
       >
     </div>

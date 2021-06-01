@@ -17,6 +17,8 @@
     </b-navbar>
 
     <div class="container">
+      <offline-alert v-show="$nuxt.isOffline" />
+
       <Nuxt />
     </div>
   </div>

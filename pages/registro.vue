@@ -31,7 +31,11 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-button block type="submit" variant="primary">Registrar</b-button>
+      <b-button v-if="$nuxt.isOnline" block type="submit" variant="primary"
+        >Registrar</b-button
+      >
+
+      <b-button class="mt-5" to="login" block variant="link">Acessar</b-button>
     </b-form>
   </div>
 </template>
