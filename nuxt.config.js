@@ -57,7 +57,7 @@ export default {
   build: {},
 
   axios: {
-    baseURL: "http://192.168.0.109:3001"
+    baseURL: "https://localhost:4443"
   },
 
   auth: {
