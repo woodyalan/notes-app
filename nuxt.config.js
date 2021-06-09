@@ -97,7 +97,5 @@ export default {
         disable: false
       }
     }
-  },
-
-  pageTransition: "fade"
+  }
 };
